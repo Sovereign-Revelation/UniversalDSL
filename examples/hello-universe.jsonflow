@@ -1,0 +1,16 @@
+{
+  "steps": [
+    {
+      "name": "Initialize",
+      "log": "Starting Sovereign Runtime"
+    },
+    {
+      "name": "Math Check",
+      "exec": "2 + 2"
+    },
+    {
+      "name": "Custom Code",
+      "exec": "`Chain ID: ` + (1001 + 42)"
+    }
+  ]
+}

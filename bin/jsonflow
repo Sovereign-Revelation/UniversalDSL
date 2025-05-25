@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+const { program } = require('commander');
+const { execSync } = require('child_process');
+const { executeJsonFlow } = require('../src/utils/jsonflow-executor');
+const path = require('path');
+
+program
+  .command('compile')
+  .description('Compile schemas into controller/frontend/route')
+  .action(() => {
+    try {
+      const result = execSync('sh ./build.sh', { stdio: 'inherit' });
+    } catch (err) {
+      console.error('❌ Build failed:', err.message);
+      process.exit(1);
+    }
+  });
+
+program
+  .command('run <path>')
+  .description('Run a .jsonflow DSL file')
+  .action((filePath) => {
+    const absolutePath = path.resolve(process.cwd(), filePath);
+    executeJsonFlow(absolutePath);
+  });
+
+program.parse(process.argv);

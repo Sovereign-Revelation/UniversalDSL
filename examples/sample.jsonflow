@@ -1,0 +1,8 @@
+{
+  "name": "DeployFrontend",
+  "steps": [
+    { "type": "generate", "name": "Schema Components" },
+    { "type": "validate", "name": "AJV Validation" },
+    { "type": "route", "name": "API Binding" }
+  ]
+}
