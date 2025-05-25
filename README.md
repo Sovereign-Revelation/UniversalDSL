@@ -501,10 +501,13 @@ You're not just coding—you're building the future of decentralized, human-cent
 Clone the repo, validate the example workflow, and start building:
 
 ```bash
-git clone https://github.com/simpleflow-dsl/simpleflow.git
-cd simpleflow
+git clone https://github.com/Sovereign-Revelation/UniversalDSL.git
+cd UniversalDSL
 npm install
-npm run validate -- workflow.json
+npm run node server.js
+cd frontend
+npm install
+npm start
 ```
 
 Check out the [docs](https://docs.simpleflow.org) for more details, or dive into the [examples](https://github.com/simpleflow-dsl/examples).
@@ -515,6 +518,6 @@ We’re building the technological exodus, and we need you. Contribute by:
 
 - Submitting PRs for new features or bug fixes.
 - Writing custom extensions or plugins.
-- Joining the community on [X](https://x.com/simpleflowdsl).
+- Joining the community on [X](https://x.com/UniversalDSL).
 
-Let’s make SimpleFlow DSL un-extinguishable. 🧱🧬🔥
+Let’s make UniversalDSL  un-extinguishable. 🧱🧬🔥
