@@ -1,0 +1,31 @@
+{
+  "name": "schemadsl",
+  "version": "1.0.0",
+  "description": "**Version 1.0 – May 2025**   **By: Cipher, Iconoclastic Builder**",
+  "main": "server.js",
+  "scripts": {
+    "build": "./build.sh",
+    "start": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "axios": "^1.9.0",
+    "commander": "^14.0.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-hook-form": "^7.56.4",
+    "react-markdown": "^10.1.0",
+    "tmp": "^0.2.3",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}
