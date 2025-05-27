@@ -1,25 +1,24 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const app = express();
 
+const app = express();
 const routes = require('./routes/index');
 const errorHandler = require('./middleware/errorHandler');
 
-// Middleware
 app.use(express.json());
 
-// Serve frontend static files
-app.use(express.static(path.join(__dirname, 'frontend')));
+// Serve static frontend from /frontend
+app.use('/ide', express.static(path.join(__dirname, 'frontend')));
 
-// API & IDE routes
-app.use('/', routes);
+// Main API routes
+app.use('/api', routes);
 
-// Error middleware
+// Error handling middleware
 app.use(errorHandler);
 
-// Start server
+// Server start
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () =>
-  console.log(`🚀 Server ready at http://localhost:${PORT}/ide`)
-);
+app.listen(PORT, () => {
+  console.log(`🚀 Sovereign IDE running at http://localhost:${PORT}/ide`);
+});
